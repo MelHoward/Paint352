@@ -18,7 +18,7 @@ namespace Paint
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PaintCanvas : Window
     {
         [System.STAThreadAttribute()]
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -30,11 +30,20 @@ namespace Paint
             app.Run();
         }
 
-        public MainWindow()
+        public PaintCanvas()
         {
             InitializeComponent();
         }
-
+        
+        private void MakeGrid()
+        {
+            Grid grid = new Grid();
+            MakeCanvas();
+        }
+        private void MakeCanvas()
+        {
+            Canvas canvas = new Canvas(); 
+        }
 
     }
 }
