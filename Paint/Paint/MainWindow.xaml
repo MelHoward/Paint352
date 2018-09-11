@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Paint"
         mc:Ignorable="d"
         Title="PaintCanvas" Height="450" Width="800">
-    <Grid>
-        
+    <Grid x:Name="paintGrid" Background="#FFB2BEF1">
+        <InkCanvas x:Name="canv" Margin="0,84,-0.4,0"/>
+        <Button Content="Clear Canvas&#xD;&#xA;" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" Width="78" Height="24" Click="Button_Click" RenderTransformOrigin="0.09,-0.088"/>
     </Grid>
 </Window>

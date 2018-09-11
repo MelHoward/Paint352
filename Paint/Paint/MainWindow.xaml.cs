@@ -27,6 +27,7 @@ namespace Paint
         {
             Paint.App app = new Paint.App();
             app.InitializeComponent();
+            PaintCanvas p = new PaintCanvas();
             app.Run();
         }
 
@@ -34,16 +35,16 @@ namespace Paint
         {
             InitializeComponent();
         }
-        
-        private void MakeGrid()
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Grid grid = new Grid();
-            MakeCanvas();
+            this.canv.Strokes.Clear();
         }
-        private void MakeCanvas()
-        {
-            Canvas canvas = new Canvas(); 
-        }
+    }
+
+    public class ButtonMaker
+    {
 
     }
 }
+
