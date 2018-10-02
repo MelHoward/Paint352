@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,9 +33,11 @@ namespace Paint
 
         public PaintCanvas()
         {
+            //Edited from my Xiaomi Mi Mix 2
             InitializeComponent();
             clear_button();
             CreateGrid();
+            CreateTextBox();
         }
 
         private void ClearCanvasClick(object sender, EventArgs e)
@@ -66,6 +68,20 @@ namespace Paint
         {
             ListBox c = CreateBox(MakeColorButtons()); 
             paintGrid.Children.Add(c);
+        } 
+
+        private void CreateTextbox()
+        {      
+            TextBox txtbox = new TextBox();
+            txtbox.Text = "Hi";
+            box.Width = 130;
+            wrap.Width = 115;
+            box.Height = 55;
+            wrap.Height = 50;
+            box.Margin = new Thickness(235,2,0,0);
+            box.HorizontalAlignment = HorizontalAlignment.Left;
+            txtbox.VerticalAlignment = VerticalAlignment.Top;
+            paintGrid.Children.Add(txtbox);
         }
 
         private ListBox CreateBox(List<Button> b)
